@@ -321,7 +321,7 @@ bool KeyScanner::getReport()
             case KC_RESERVED_AA: special_key = keycode; extraModifiers=0; break;            // KC_RESERVED_AA is the keycode marker for special keys.
             case KC_RESERVED_AB: if(!processingmacros){specialfunction = keycode; processingmacros=true;} extraModifiers=0; break;               // KC_RESERVED_AB keycode for marking this as a specialfunction for international/special characters (ALT-0233 = é).
         }
-        //add all of the extra modifiers into the curren modifier 
+        //add all of the extra modifiers into the current modifier
         currentMod |= extraModifiers;
         if (bufferposition == 7)
         {
@@ -331,7 +331,7 @@ bool KeyScanner::getReport()
 
     currentReport[0] = currentMod;
     currentReport[7] = localLayer;
-    
+    process_combos(currentReport); // FIXME need some sort of debounce
 
 if (activeKeys.empty() && processingmacros) {processingmacros = false;}
 
