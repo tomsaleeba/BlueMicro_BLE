@@ -59,7 +59,7 @@ void setupKeymap() {
     KC_ESC,   KC_UP,    KC_TAB,    KC_T,
     KC_LEFT,  KC_DOWN,  KC_RIGHT,  KC_G,
     KC_M,     KC_L,     KC_I,      KC_O,
-    LAYER_1,  KC_NO,    KC_NO,     KC_ENTER
+    KC_NO,    KC_NO,    KC_NO,     KC_ENTER
   );
 
   /*
