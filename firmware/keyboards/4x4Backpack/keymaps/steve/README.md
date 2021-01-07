@@ -1,11 +1,11 @@
 # Steve's macropad layout
 
-![](./layout.png)
+![](./img/layout.png)
 
 When you don’t have many keys, you have to use some magic to get all the
 functions you need. As this is a gaming macropad, we want WASD and the
-surrounding keys, so the top 12 keys are what you would find on any QWERTY
-keyboard.
+surrounding keys, so the top three rows of keys are what you would find on any
+QWERTY keyboard. Then the bottom row is where we add the other essentials.
 
 ![](./img/key-base.png)
 
