@@ -296,7 +296,6 @@ void scanMatrix() {
 }
 
 
-// FIXME can we use a weak def here so we don't need a DEF?
 #if USER_PROCESS_COMBOS == 1
     void process_combos(uint8_t* currentReport)
     {

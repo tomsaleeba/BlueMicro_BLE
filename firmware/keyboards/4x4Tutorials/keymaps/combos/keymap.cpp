@@ -46,12 +46,19 @@ void process_combos(uint8_t* currentReport)
   printKeysToSerial(currentReport);
   uint8_t firstKey = currentReport[1];
   uint8_t secondKey = currentReport[2];
-  // FIXME how to impl well?
+  uint8_t thirdKey = currentReport[3];
+  if (firstKey == KC_1 && secondKey == KC_2 && thirdKey == KC_3) {
+    currentReport[1] = KC_B;
+    // be sure to zero out the other keys
+    currentReport[2] = 0;
+    currentReport[3] = 0;
+    // you can match a longer sequence based on the order you have your logic
+    return;
+  }
   if (firstKey == KC_1 && secondKey == KC_2) {
     currentReport[1] = KC_A;
     currentReport[2] = 0;
   }
-  // FIXME can we *only* match the longest combo?
 }
 
 void setupKeymap() {}

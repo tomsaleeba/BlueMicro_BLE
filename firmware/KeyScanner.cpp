@@ -331,7 +331,9 @@ bool KeyScanner::getReport()
 
     currentReport[0] = currentMod;
     currentReport[7] = localLayer;
+#if USER_PROCESS_COMBOS == 0
     process_combos(currentReport); // FIXME need some sort of debounce
+#endif
 
 if (activeKeys.empty() && processingmacros) {processingmacros = false;}
 
